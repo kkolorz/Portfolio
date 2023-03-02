@@ -11,7 +11,7 @@ const Navbar = () => {
             <div></div>
 
             {/* Desktop menu */}
-                <ul className='flex-row text-white uppercase font-semibold hidden md:flex md:text-[1] lg:text-[1.25rem]'>
+                <ul className='flex-row text-white uppercase font-semibold hidden md:flex md:text-[1.1rem] lg:text-[1.25rem]'>
                     <li>Home</li>
                     <li>About Me</li>
                     <li>Experience</li>
