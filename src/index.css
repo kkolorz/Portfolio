@@ -15,10 +15,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
+  color: #fff;
 }
 
 @layer base {
-  li {
+  a {
     @apply px-4;
     @apply cursor-pointer
   }
