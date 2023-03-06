@@ -27,19 +27,19 @@ const Navbar = () => {
 
             {/* Desktop menu */}
                 <div className='flex-row uppercase font-semibold hidden md:flex md:text-[1.1rem] lg:text-[1.25rem]'>
-                <Link to="home" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] duration-200">
+                <Link to="home" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     Home
                 </Link>
-                <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] duration-200">
+                <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     About Me
                 </Link>
-                <Link to="experience" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] duration-200">
+                <Link to="experience" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     Experience
                 </Link>
-                <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] duration-200">
+                <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     Projects
                 </Link>
-                <Link to="contact" spy={true} smooth={true} offset={-150} duration={500} className="nav-item hover:text-[#BF91FA] duration-200">
+                <Link to="contact" spy={true} smooth={true} offset={-150} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     Contact
                 </Link>
                 </div>
