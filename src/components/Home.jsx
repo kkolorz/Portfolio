@@ -1,5 +1,5 @@
 import React from 'react'
-import { delay, motion as m } from 'framer-motion'
+import { motion as m } from 'framer-motion'
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
                     hidden: { opacity: 0, x: -100 },
                     visible: { opacity: 1, x: 0 }
                 }}
-                className='text-xl sm:text-xl py-1'><span className='text-[#BF91FA]'>Hello there,</span> my name is
+                className='text-xl py-1'><span className='text-[#BF91FA]'>Hello there,</span> my name is
             </m.p>
             <m.h1 
                 initial="hidden"

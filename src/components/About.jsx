@@ -3,19 +3,9 @@ import { motion as m } from 'framer-motion'
 
 const About = () => {
   return (
-    <section id="about" className='w-full h-screen'>
+    <section id="about" className='max-w-[1200px] mx-auto px-6 flex flex-col justify-center md:pl-[200px] w-full h-screen'>
         <div>
-        <m.p 
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once:false, amount: 0.5 }}
-                transition={{ duration: 0.5 }}
-                variants= {{
-                    hidden: { opacity: 0, x: -100 },
-                    visible: { opacity: 1, x: 0 }
-                }}
-                className='text-xl sm:text-xl py-1'><span className='text-[#BF91FA]'>Hello there,</span> my name is
-            </m.p>
+            <h3 className='text-4xl md:text-[3.2rem] py-1 md:py-3 font-semibold'>About me</h3>
         </div>
     </section>
   )

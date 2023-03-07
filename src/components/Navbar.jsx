@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className={
-        navBg ? 'fixed w-full h-[60px] backdrop-blur-xl flex justify-center md:h-[80px] duration-200' : 'fixed w-full h-[60px] flex justify-center md:h-[80px] duration-200'
+        navBg ? 'fixed w-full h-[60px] backdrop-blur-xl flex justify-center md:h-[80px] duration-200 z-10' : 'fixed w-full h-[60px] flex justify-center md:h-[80px] duration-200 z-10'
     }>
         <div className='max-w-[1200px] w-[1200px] h-full flex justify-between items-center px-4'>
             <div></div>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 <Link to="about" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     About Me
                 </Link>
-                <Link to="experience" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
+                <Link to="skills" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
                     Experience
                 </Link>
                 <Link to="projects" spy={true} smooth={true} offset={-100} duration={500} className="nav-item hover:text-[#BF91FA] hover:scale-[1.04] duration-200">
