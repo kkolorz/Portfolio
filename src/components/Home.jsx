@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion as m } from 'framer-motion'
+import { Link } from 'react-scroll';
+import { motion as m } from 'framer-motion';
 
 const Home = () => {
   return (
@@ -66,7 +66,9 @@ const Home = () => {
                         visible: { opacity: 1, x: 0 }
                     }}                  
                     className='text-[0.9rem] font-semibold rounded-2xl py-3 px-6 bg-[#BF91FA] sm:text-xl hover:!scale-[1.06] hover:drop-shadow-3xl  duration-200'>
-                    <a href="#contact">Get in touch</a>
+                    <Link to="contact" spy={true} smooth={true} offset={-120} duration={500}>
+                    Get in touch
+                    </Link>
                 </m.button>
             </div>
         </div>

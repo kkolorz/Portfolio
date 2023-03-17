@@ -44,7 +44,7 @@ const Projects = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once:true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.5 }}
                     variants= {{
                     hidden: { opacity: 0, x: 200 },
                     visible: { opacity: 1, x: 0 }
@@ -90,7 +90,6 @@ const Projects = () => {
                     </p>
                     <div className='flex flex-col'>
                         <div className='w-full h-6 md:h-8 flex justify-center gap-4 mt-7'>
-                            <img src={html} alt="Tech stack image" />
                             <img src={react} alt="Tech stack image" />
                             <img src={tailwind} alt="Tech stack image" />
                             <img src={git} alt="Tech stack image" />
