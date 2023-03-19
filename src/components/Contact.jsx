@@ -1,31 +1,17 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { motion as m } from 'framer-motion';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+
 
 const Contact = () => {
+    const { register, trigger, clearErrors, formState: {errors} } = useForm();
 
-    const formik = useFormik ({
-        initialValues: {
-            name: '',
-            email: '',
-            message: ''
-        },
-
-        validationSchema: Yup.object({
-            name: Yup.string().required("Name is required"),
-            email: Yup.string().email().matches('/@[^.]*\./'),
-            email: Yup.string().email().matches('/^(?!.*[^,]*,)/'),
-            message: Yup.string().required("Message field is required and cannot be empty, please enter your message")
-        }),
-
-        // Submit form
-        onSubmit: (values) => {
-            console.log(values)
+    const onSubmit = async e => {
+        const isValid = await trigger();
+        if (!isValid) {
+            e.preventDefault();
         }
-    })
-
-
+    }
 
   return (
     <section id="contact" className='max-w-[1200px] mx-auto px-6 my-14 md:my-20 lg:my-28 flex flex-col md:pl-[200px] w-full h-full'>
@@ -43,26 +29,52 @@ const Contact = () => {
         </div>
         <div className='w-full lg:w-[90%] py-8'>
             <div className='mb-8'>
-                <p className='text-xl py-1'>Let's talk or shoot me an email directly on <span></span></p>
+                <m.p 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once:true, amount: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                        variants= {{                    
+                        hidden: { opacity: 0, x: -100 },
+                        visible: { opacity: 1, x: 0 }
+                    }}                     
+                    className='text-xl py-1'>Let's talk or shoot me an email directly on <span className='font-bold text-[#BF91FA]'>karolkolorzdev@gmail.com</span>
+                </m.p>
             </div>
-            <form 
-                onSubmit={formik.handleSubmit}
-                action="">
+            <m.form 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once:true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                    variants= {{                    
+                    hidden: { opacity: 0, y: 100 },
+                    visible: { opacity: 1, y: 0 }
+                }}             
+                target="_blank"
+                onSubmit={onSubmit}
+                action="https://formsubmit.co/4c11a95eb3372d46a348d02a40e5c1a9"
+                method="POST">
                 {/* Name input field */}
                 <div className='flex flex-col mb-6'>
                     <label 
-                        className={`mb-2 text-2xl ${formik.touched.name && formik.errors.name ? 'text-red-500' : ''}`}
+                        className={'mb-2 text-2xl'}
                         htmlFor="name">
-                            {formik.touched.name && formik.errors.name ? formik.errors.name : "Name"}
+                            Name
                     </label>
                     <input 
                         className='border-4 outline-none p-4 rounded-md focus:border-[#BF91FA]  text-black text-lg'
                         placeholder='Enter your name'
-                        name="name"
                         type="text"
-                        value={formik.values.name} 
-                        onChange={formik.handleChange} 
-                        onBlur={formik.handleBlur} />
+                        {...register("name", {
+                            required: true,
+                        })}
+                        onChange={() => clearErrors("name")} 
+                    />
+                    {errors.name && (
+                        <p className='text-red-500 mt-2 text-lg'>
+                            {errors.name.type === 'required' && 'This field is required.'}
+                        </p>
+                    )}
                 </div>
                 {/* Email input field */}
                 <div className='flex flex-col mb-6'>
@@ -74,10 +86,19 @@ const Contact = () => {
                     <input 
                         className='border-4 outline-none p-4 rounded-md focus:border-[#BF91FA] text-black text-lg'
                         placeholder='Enter your email'
-                        name="email"
-                        type="email" 
-                        value={formik.values.email} 
-                        onChange={formik.handleChange}/>
+                        type="text" 
+                        {...register("email", {
+                            required: true,
+                            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        })}
+                        onChange={() => clearErrors("email")}
+                    />
+                    {errors.email && (
+                        <p className='text-red-500 mt-2 text-lg'>
+                            {errors.email.type === 'required' && 'This field is required.'}
+                            {errors.email.type === 'pattern' && 'Invalid email address'}
+                        </p>
+                    )}
                 </div>
                 {/* Message input field */}
                 <div>
@@ -89,10 +110,19 @@ const Contact = () => {
                     <textarea
                         className='w-full h-[180px] min-h-[180px] text-xl border-4 outline-none mt-2 p-2 rounded-md focus:border-[#BF91FA] focus:ring-[#BF91FA] focus:shadow-2xl text-black'
                         placeholder='Enter your message'
-                        name='message'
-                        value={formik.values.message} 
-                        onChange={formik.handleChange} >
+                        {...register("message", {
+                            required: true,
+                            maxLength: 2000
+                        })}
+                        onChange={() => clearErrors("message")}
+                    >
                     </textarea>
+                    {errors.message && (
+                        <p className='text-red-500 mt-2 text-lg'>
+                            {errors.message.type === 'required' && 'This field is required.'}
+                            {errors.message.type === 'maxLength' && 'Max length is 2000 char.'}
+                        </p>
+                    )}
                 </div>
                 {/* Submit form button */}
                 <button 
@@ -100,7 +130,7 @@ const Contact = () => {
                     type="submit">
                         Send Message
                 </button>
-            </form>
+            </m.form>
         </div>
     </section>
   )
