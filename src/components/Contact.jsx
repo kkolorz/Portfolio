@@ -32,20 +32,20 @@ const Contact = () => {
                 <m.p 
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once:true, amount: 0.5 }}
+                    viewport={{ once:true, amount: 0.2 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                         variants= {{                    
                         hidden: { opacity: 0, x: -100 },
                         visible: { opacity: 1, x: 0 }
                     }}                     
-                    className='text-xl py-1'>Let's talk or shoot me an email directly on <span className='font-bold text-[#BF91FA]'>karolkolorzdev@gmail.com</span>
+                    className='text-xl py-1'>Let's talk, or shoot me an email directly on <span className='font-bold text-[#BF91FA]'>karolkolorzdev@gmail.com</span>
                 </m.p>
             </div>
             <m.form 
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once:true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once:true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
                     variants= {{                    
                     hidden: { opacity: 0, y: 100 },
                     visible: { opacity: 1, y: 0 }

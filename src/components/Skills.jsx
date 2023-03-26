@@ -83,19 +83,19 @@ const Skills = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once:true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
                 variants= {{
                 hidden: { opacity: 0, x: -100 },
                 visible: { opacity: 1, x: 0 }
             }}            
-            className='text-[1.1rem] mb-4 py-3 md:py-4'>
+            className='text-[1.1rem] mb-4 pt-3 md:py-4'>
             Below you can check main technologies and tools I've use
         </m.p>
         <m.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once:true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: 0.3}}
+            viewport={{ once:true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
                 variants= {{
                 hidden: { opacity: 0, y: 100 },
                 visible: { opacity: 1, y: 0 }

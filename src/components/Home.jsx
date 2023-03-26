@@ -9,7 +9,7 @@ const Home = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once:true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: 0 }}
+                transition={{ duration: 0.5 }}
                 variants= {{
                     hidden: { opacity: 0, x: -100 },
                     visible: { opacity: 1, x: 0 }
@@ -47,10 +47,10 @@ const Home = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
                         variants= {{
-                        hidden: { opacity: 0, x: -100 },
-                        visible: { opacity: 1, x: 0 }
+                        hidden: { opacity: 0, y: 50 },
+                        visible: { opacity: 1, y: 0 }
                     }}                                   
                     className='text-[0.9rem] font-semibold rounded-2xl border-[#BF81FA] border-solid border-[3px] py-3 px-4 sm:text-xl 
                     hover:!scale-[1.06] duration-200'>
@@ -60,9 +60,9 @@ const Home = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
                         variants= {{
-                        hidden: { opacity: 0, x: 100 },
+                        hidden: { opacity: 0, x: 50 },
                         visible: { opacity: 1, x: 0 }
                     }}                  
                     className='text-[0.9rem] font-semibold rounded-2xl py-3 px-6 bg-[#BF91FA] sm:text-xl hover:!scale-[1.06] hover:drop-shadow-3xl  duration-200'>
