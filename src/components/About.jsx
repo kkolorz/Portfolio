@@ -1,5 +1,4 @@
 import React from 'react';
-import Me from '../assets/me.jpg'
 import { motion as m } from 'framer-motion';
 
 const About = () => {
@@ -46,9 +45,9 @@ const About = () => {
                 I'm an ambitious person who pays great attention to details. I want to expand my knowledge in the field of web development.
             </m.p>
           </div>
-          <div className=''>
-            <img className='' src={Me} alt="" />
-          </div>
+          {/* <div className=''>
+            <img className='' src={} alt="" />
+          </div> */}
         </div>
     </section>
   )

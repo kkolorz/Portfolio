@@ -89,7 +89,7 @@ const Skills = () => {
                 visible: { opacity: 1, x: 0 }
             }}            
             className='text-[1.1rem] mb-4 pt-3 md:py-4'>
-            Below you can check main technologies and tools I've use
+            Below you can check main technologies and tools I've use.
         </m.p>
         <m.div
             initial="hidden"

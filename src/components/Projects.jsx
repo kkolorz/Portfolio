@@ -2,7 +2,6 @@ import { motion as m } from 'framer-motion'
 import digitalAgency from '../assets/projects/digital-agency.png'
 import portfolio from '../assets/projects/portfolio.png'
 import html from '../assets/tech/html.svg'
-import css from '../assets/tech/css.svg'
 import js from '../assets/tech/js.svg'
 import react from '../assets/tech/react.svg'
 import tailwind from '../assets/tech/tailwind.svg'
@@ -36,7 +35,7 @@ const Projects = () => {
                 visible: { opacity: 1, x: 0 }
             }}            
             className='text-[1.1rem] mb-4 pt-3 md:py-4'>
-            Below you can check main technologies and tools I've use
+            Take a look at some of my featured projects.
         </m.p>
         <div className='w-full lg:w-[90%] grid grid-cols-1 gap-10 text-center py-8'>
             {/* Projects cards */}
@@ -55,7 +54,7 @@ const Projects = () => {
                 </div>
                 <div className='flex flex-col justify-center items-center'>
                     <h4 className='text-xl md:text-2xl lg:text-3xl font-semibold my-3'>Digital Agency - Figma Clone</h4>
-                    <p className='max-w-[600px] content-center my-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet hic molestias repudiandae cumque in exercitationem?</p>
+                    <p className='max-w-[600px] content-center my-3'>A Digital Agency is a meticulous recreation of a design created in Figma, aiming to achieve ass accuracy as possible. The project is fully responsive, ensuring optimal user experience across various devices and screen sizes. To enhance my workflow, I utilized the Sass preprocessor for efficient and maintainable styling and leveraged the power of Gulp.js for tasks such as code minification and image optimization. The entire codebase is available for viewing on my GitHub profile.</p>
                     <div>                        
                         <div className='h-6 md:h-8 flex justify-center gap-2 mt-7'>
                             <img src={html} alt="Tech stack image" />
@@ -83,7 +82,7 @@ const Projects = () => {
                 </div>
                 <div className='flex flex-col justify-center items-center'>
                     <h4 className='text-xl md:text-2xl lg:text-3xl font-semibold my-3'>Personal Portfolio</h4>
-                    <p className='max-w-[600px] content-center my-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet hic molestias repudiandae cumque in exercitationem?</p>
+                    <p className='max-w-[600px] content-center my-3'>My portfolio project was built using React.js and designed in Figma, the portfolio combines functionality with a visually appealing design. With the use of the Tailwind CSS framework, the project is styled to provide a modern and professional look. The portfolio is fully responsive, ensuring a seamless user experience across different devices. All the code for the project is available on my GitHub profile.</p>
                     <div>                        
                         <div className='h-6 md:h-8 flex justify-center gap-2 mt-7'>
                             <img src={react} alt="Tech stack image" />
