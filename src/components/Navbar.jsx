@@ -57,8 +57,8 @@ const Navbar = () => {
                 <a onClick={handleNav} href='#about' className='py-8 text-4xl font-semibold'>
                     About Me
                 </a>
-                <a onClick={handleNav} href='#experience' className='py-8 text-4xl font-semibold'>
-                    Experience
+                <a onClick={handleNav} href='#skills' className='py-8 text-4xl font-semibold'>
+                    Skills
                 </a>
                 <a onClick={handleNav} href='#projects' className='py-8 text-4xl font-semibold'>
                     Projects

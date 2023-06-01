@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll';
 import { motion as m } from 'framer-motion';
+import CV from '../CV-Karol-Kolorz.pdf';
 
 const Home = () => {
   return (
@@ -36,14 +37,17 @@ const Home = () => {
                     visible: { opacity: 1, y: 0 }
                 }}
             >
-                <h2 className='text-4xl sm:text-5xl md:text-[3.5rem] py-3 font-semibold'><span className='text-[#BF91FA]'>I'm </span>Front-End Developer</h2>
-                <p className='text-[1.1rem] py-2 max-w-[750px]'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam ex laborum cupiditate magni incidunt quas adipisci expedita, debitis quo temporibus?</p>
-                <p className='text-[1.1rem] py-3'>
-                    Let's meet!</p>
+            <h2 className='text-4xl sm:text-5xl md:text-[3.5rem] py-3 font-semibold'><span className='text-[#BF91FA]'>I'm </span>Front-End Developer</h2>
+            <p className='text-[1.4rem] py-3'>
+                Get to know each other!
+            </p>
             </m.div>
             <div className='flex gap-4 py-8'>
-                <m.button 
+                <m.a
+                    href={CV}
+                    download="CV-Karol-Kolorz"
+                    // target='_blank'
+                    rel='noopener noreferrer'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once:true, amount: 0.5 }}
@@ -55,7 +59,7 @@ const Home = () => {
                     className='text-[0.9rem] font-semibold rounded-2xl border-[#BF81FA] border-solid border-[3px] py-3 px-4 sm:text-xl 
                     hover:!scale-[1.06] duration-200'>
                         Donwload CV
-                </m.button>
+                </m.a>
                 <m.button 
                     initial="hidden"
                     whileInView="visible"
@@ -67,7 +71,7 @@ const Home = () => {
                     }}                  
                     className='text-[0.9rem] font-semibold rounded-2xl py-3 px-6 bg-[#BF91FA] sm:text-xl hover:!scale-[1.06] hover:drop-shadow-3xl  duration-200'>
                     <Link to="contact" spy={true} smooth={true} offset={-120} duration={500}>
-                    Get in touch
+                        Get in touch
                     </Link>
                 </m.button>
             </div>
