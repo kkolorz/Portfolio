@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 import { motion as m } from 'framer-motion';
-import CV from '../CV-Karol-Kolorz.pdf';
+import CV from '../CV_Karol_Kolorz.pdf';
 
 const Home = () => {
   return (
